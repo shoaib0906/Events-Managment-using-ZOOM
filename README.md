@@ -1,20 +1,14 @@
-## Events-Managment-with-Chat
+## Events-Managment-with-Zoom 
 
-## Chat Feature
-  - Users / groups(soon) chat system.
-  - Real-time contacts list updates.
-  - Favorites contacts list (Like stories style) and add to favorite button.
-  - Saved Messages to save your messages online like Telegram messenger app.
-  - Search functionality.
-  - Contact item's last message indicator (e.g. You: ....).
-  - Real-time user's active status.
-  - Real-time typing indicator.
-  - Real-time seen messages indicator.
-  - Real-time internet connection status.
-  - Upload attachments (Photo/File).
-  - Shared photos, delete conversation.. (User's info right side).
-  - Responsive design with all devices.
-  - User settings and chat customization : user's profile photo, dark mode and chat color. with simple and wonderful UI design.
+## Feature
+
+   - Create some events people Registration
+   - Only registered People Get Access those Meeting to Join.
+   - Meeting Creation by admin using ZOOM.
+   - Meeting Handle through ZOOM API through this platform.
+   - Live Streaming Zoom Meeting for those People
+   
+
 
 ## About Laravel
 
