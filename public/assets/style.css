@@ -1,0 +1,227 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none;
+  /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  background: url(bg.png) no-repeat center / cover;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255,255,255,1);
+  transition: color .3s;
+  text-transform: uppercase;
+}
+.active .nav-link {
+  font-weight: 700;
+}
+.home-link, .user-info {
+  width: 200px;
+}
+.home-link {
+  text-align: left;
+}
+.logout svg {
+  margin-left: 5px;
+  height: 24px;
+}
+.logout:hover {
+  text-decoration: none;
+  opacity: .7;
+  transition: opacity .3s;
+}
+video {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  width: auto;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.cover-container {
+  z-index: 1
+}
+
+.field-nav {
+  position: absolute;
+  font-size: 0;
+  color: transparent;
+  line-height: 1.2;
+  /* color: #ffffff;
+  background: #007bff; */
+  transition: all .3s;
+  border: 3px solid rgba(0, 123, 255, .5);
+  border-bottom: 0;
+}
+
+/* .field-nav:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.25);
+} */
+.field-nav:hover {
+  animation: shadowTone 1s alternate infinite;
+}
+@keyframes shadowTone {
+  0% {
+    box-shadow: 0px -5px 20px -5px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0px -5px 20px -5px rgba(255, 255, 255, 0.9);
+  }
+}
+@keyframes shadowToneFull {
+  0% {
+    background: rgba(255,255,255,0);
+    box-shadow: 0px -5px 20px -5px rgba(255, 255, 255, 0);
+  }
+  100% {
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.6);
+  }
+}
+.field-nav:nth-child(1) {
+  width: 16.5vh;
+  height: 16vh;
+  top: 46.5%;
+  left: calc(50% - 38vh);
+}
+
+.field-nav:nth-child(2) {
+  width: 16.5vh;
+  height: 16vh;
+  top: 46.5%;
+  right: calc(50% - 37.5vh);
+}
+
+.field-nav:nth-child(3) {
+  width: 29vh;
+  height: 21vh;
+  top: 41%;
+  left: calc(50% - 15vh);
+}
+
+.field-nav:nth-child(4) {
+  width: 38vh;
+    bottom: 4%;
+    left: calc(50% - 9vh);
+    height: 6vh;
+    border: none
+}
+.field-nav:nth-child(4):hover {
+  animation: shadowToneFull 1s alternate infinite;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+.program-table {
+  height: calc(100vh - 3.5rem);
+  overflow-y: auto;
+}
+
+.program-table::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+  background-color: #F5F5F5;
+}
+
+.program-table::-webkit-scrollbar {
+  width: 4px;
+  background-color: #F5F5F5;
+}
+
+.program-table::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, .5);
+  border: none;
+}
+
+.program-table table {
+  /* margin-top: 3rem; */
+  background: #fff;
+}
+
+.program-table td:first-child {
+  width: 10rem;
+}
+
+.program-table th:last-child,
+.program-table td:last-child {
+  text-align: left;
+}
+
+.resource-link {
+  position: relative;
+  display: block;
+  width: 15rem;
+  height: 10rem;
+  margin: 1rem auto;
+  padding-top: 7rem;
+  color: #000;
+  background: #fff;
+  transition: box-shadow .3s;
+}
+
+.resource-link::before {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  left: calc(50% - 2rem);
+  width: 4rem;
+  height: 4rem;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' class='bi bi-book' fill='%23007bff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z'/%3E%3C/svg%3E") no-repeat center;
+}
+
+.resource-link:hover,
+.resource-link:active,
+.resource-link:focus {
+  color: #000;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.25);
+}
+.table-hover tr {
+  cursor: pointer;
+}
+.form-container {
+  width: 500px;
+  height: auto;
+  padding: 50px;
+  color: #000;
+  background: #fff;
+}
+.form-container .form-group {
+  text-align: left;
+}
